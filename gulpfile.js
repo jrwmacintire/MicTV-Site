@@ -15,16 +15,14 @@ var del = require('del');
 var sass = require('gulp-sass');
 var rubysass = require('gulp-ruby-sass');
 var criticalCss = require('gulp-critical-css');
-var connect = require('gulp-connect');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
 var changed = require('gulp-changed');
 var sitemap = require('gulp-sitemap');
-
 var htmlSource = 'app/*.html';
 var cssSource = 'app/styles/*.css';
 var jsSource = 'app/scripts/*.js';
-var imagesSource = 'app/images/*';
+var imagesSource = 'app/images/**/*';
 var allSources = htmlSource.concat(cssSource).concat(jsSource);
 var htmlDest = 'assets/';
 var cssDest = 'assets/styles/';
@@ -36,8 +34,9 @@ var imagesDest = 'assets/images/';
 //                  'Connect' server
 gulp.task('connect', function() {
     connect.server({
-        root: 'app',
+        root: '.',
         port: 8080,
+        host: 'localhost',
         livereload: true
     });
 });
@@ -46,7 +45,7 @@ gulp.task('connect', function() {
 //
 //                  Livereload
 gulp.task('livereload', function() {
-    gulp.src(allSources)
+    gulp.src('allSources')
     .pipe(connect.reload());
 });
 
@@ -54,7 +53,10 @@ gulp.task('livereload', function() {
 //
 //                  Watch files to trigger 'livereload'
 gulp.task('watch', function() {
-    gulp.watch(allSources, ['livereload']);
+    gulp.watch(htmlSource, ['html']);
+    gulp.watch(cssSource, ['css']);
+    gulp.watch(jsSource, ['js']);
+    gulp.watch(imagesSource, ['images']);
 });
 
 //
@@ -75,7 +77,7 @@ gulp.task('html', function() {
 gulp.task('css', function() {
     util.log('~~~~~ CSS ~~~~~~')
     return gulp.src(cssSource)
-    .pipe(changed(cssSource))
+    .pipe(changed(cssDest))
     .pipe(sourcemaps.init())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(criticalCss())
@@ -91,9 +93,7 @@ gulp.task('js', function() {
     util.log('~~~~~ JS ~~~~~~')
     return gulp.src(jsSource)
     .pipe(changed(jsDest))
-    .pipe(clean())
     .pipe(uglify())
-    .pipe(concat('scripts.js'))
     .pipe(gulp.dest(jsDest))
     .pipe(connect.reload());
 });
@@ -103,7 +103,7 @@ gulp.task('js', function() {
 //              Images
 gulp.task('images', function() {
     util.log('~~~~~ IMAGES ~~~~~')
-    return gulp.src(imagesSource)
+    return gulp.src('./app/images/elements/')
     .pipe(changed(imagesDest))
     .pipe(imagemin())
     .pipe(gulp.dest(imagesDest));

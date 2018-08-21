@@ -5,44 +5,536 @@ html
     // Position
     padding: 0
     margin: 0
+    // Font
+    font-size: 16px
 
     body
+        // Flexbox
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
         // Size
         width: 100%
-        height: auto
         // Position
         padding: 0
         margin: 0
         // Style
         background-color: $bg-pink
 
-        div.page
+
+        div.navbar
+            // Flexbox
+            order: 1
+            display: flex
+            justify-content: space-around
+            // Size
+            width: 700px
+            // Position
+            margin: 10px 0 15px
+
+            img
+                // Size
+                width: 140px
+
+        img.logo
+            // Flexbox
+            order: 0
+            // Position
+            margin: 45px auto 15px
+
+        //
+        // Container for contact information
+        div.container
             // Flexbox
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
+
+        div.tv-wrapper
+            // Flexbox
+            order: 2
+            justify-content: center
+
+        div.contact
+            // Flexbox
+            order: 2
+            // Flexbox
+            display: flex
             // Size
             max-width: 700px
-            height: 100%
-            // Position
-            margin: auto
 
-            div.navbar
+            img.line
+                // Size
+                width: 90%
+                // Position
+                padding: 0
+                margin: 33px 0
+
+            img.banner
+                // Size
+                height: 33px
+
+            p
+                // Position
+                margin: 28px 0
+                // Font
+                font-size: 1.6em
+                font-family: 'BioRhyme', serif
+                font-weight: 500
+
+                a
+                    text-decoration: none
+
+            form.contact-form
                 // Flexbox
                 display: flex
-                justify-content: space-around
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                margin: 10px
+
+                div
+                    // Flexbox
+                    display: flex
+                    justify-content: center
+                    // Size
+                    width: 440px
+                    // Position
+                    padding: 13px 0
+                    // Font
+                    font-family: 'BioRhyme', serif
+
+                    label
+                        // Size
+                        width: 20%
+                        // Font
+
+                        letter-spacing: 1px
+                        // Style
+
+                    input
+                        // Size
+                        width: 76%
+                        // Position
+                        float: right
+                        // Style
+                        border: none
+                        border-bottom: 1.4px solid darken(rgb(98, 205, 209), 33)
+                        background-color: transparent
+                        // Font
+                        color: darken(rgb(98, 205, 209), 56)
+                        font-size: 1.1em
+                        font-family: monospace
+                        letter-spacing: 1.4px
+
+                    textarea
+                        // Size
+                        width: 76%
+                        // Position
+                        float: right
+                        padding: 3px 0 0 6px
+                        // Style
+                        border: 1.4px solid darken(rgb(98, 205, 209), 33)
+                        background-color: transparent
+                        // Font
+                        font-size: 1.1em
+                        letter-spacing: 1.4px
+
+                    button
+                        // Flexbox
+                        align-self: center
+                        // Size
+                        width: 72%
+                        height: 70px
+                        // Position
+                        margin: 10px 0
+                        display: block
+                        // Style
+                        background: rgba(98, 205, 209, 0.5)
+                        border: 1px solid darken(rgb(98, 205, 209), 33)
+                        // Font
+                        font-size: 2em
+                        font-family: 'BioRhyme', serif
+                        font-weight: 600
+                        letter-spacing: 2px
+                        text-transform: uppercase
+                        // Animation
+
+                    button:hover
+                        // Size
+                        width: 76%
+                        // Style
+                        background: rgba(98, 205, 209, 0.9)
+                        border-bottom: 5px solid darken(rgb(98, 205, 209), 38)
+                        // Animation
+                        transition: width 0.35s
+
+                    button:active
+                        // Size
+                        width: 100%
+                        // Style
+                        border-bottom: 2px solid darken(rgb(98, 205, 209), 46)
+
+                    i.success
+                        color: green
+                        display: none
+
+                    i.failure
+                        color: red
+                        display: none
+
+            div.submit
+                // Flexbox
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                h3
+                    display: none
+                    // Font
+                    font-size: 1.4em
+                    // Position
+                    margin: 14px 0
+                    padding: 0
+                    text-align: center
+
+                p
+                    display: none
+                    // Font
+                    font-size: 1.1em
+                    // Position
+                    margin: 14px 0
+                    padding: 0
+                    text-align: center
+
+            img.shoot-out
                 // Size
+                width: 385px
+
+        div.shows
+            // Flexbox
+            order: 2
+            display: flex
+            // Size
+            max-width: 700px
+
+            img.line
+                // Size
+                width: 90%
+                // Position
+                margin: 28px 0
+
+            img.banner
+                // Size
+                height: 39px
+                // Position
+                margin-bottom: 1.8rem
+
+            section
+                display: flex
+                flex-direction: column
+                padding-bottom: 1.4rem
+                margin-bottom: 1.4rem
+                border-bottom: 1px solid darkgray
+
+                h4
+                    margin: 0.7rem auto
+                    font-size: 1.7rem
+                    font-family: 'BioRhyme', serif
+
+                    a
+                        text-decoration: none
+                        color: black
+
+                    a:hover
+                        color: darken(darkgray, 10)
+
+                p
+                    // Position
+                    text-align: center
+                    padding: 0
+                    margin: 0
+                    // Font
+                    font-family: 'BioRhyme', serif
+                    font-size: 1.3em
+                    font-weight: 400
+                    line-height: 1.8em
+
+                    strong
+                        font-size: 1.5rem
+
+                    a
+                        // Font
+                        color: black
+                        font-size: 1.3rem
+                        font-weight: 600
+                        font-family: 'BioRhyme', serif
+                        text-decoration: none
+                        letter-spacing: 1px
+
+                    a:hover
+                        text-decoration: underline
+
+            img.dino-mac
+                // Size
+                width: 375px
+                // Position
+                margin: 24px 0
+
+        div.shop
+            // Flexbox
+            order: 2
+            // Flexbox
+            display: flex
+            flex-direction: column
+            // Size
+            max-width: 700px
+
+            img.line
+                // Flexbox
+                order: 0
+                // Size
+                width: 90%
+                // Position
+                margin: 28px 0
+
+            img.banner
+                // Flexbox
+                order: 1
+                // Size
+                width: 96px
+                // Position
+                padding: 0
+
+            div#animation
+                // Flexbox
+                order: 2
+                display: flex
+                justify-content: center
+                // Size
+                max-width: 400px
+                height: 320px
+                // Position
+                margin: 14px 0 0
+
+                img
+                    display: none
+                    // Position
+                    bottom: 0
+
+                img:first-child
+                    display: block
+
+                img.lizard
+                    // Size
+                    width: 100%
+                    // Position
+                    // margin: 28px 0
+                    bottom: 0
+
+            img.notice
+                // Flexbox
+                order: 3
+                // Size
+                width: 400px
+
+            img.bottom
+                // Flexbox
+                order: 4
+        //
+        //
+
+        div.footer-wrapper
+            // Flexbox
+            order: 3
+
+            img.footer
+                // Size
+                width: 270px
+                // Position
+                margin-bottom: 50px
+
+            img.knob
+                // Size
+                width: 54px
+                // Position
+                position: relative
+                top: -348px
+                // huehuehue vvv
+                right: -92px
+                float: right
+
+@media screen and (max-width: 600px)
+
+    html
+        // Font
+        font-size: 14px
+
+        body
+            width: 100%
+            height: auto
+
+            div.navbar
+                // Size
+                max-width: 100%
+                // Position
+                margin: 6px 0 0
+
+                a
+
+                    img
+                        // Size
+                        width: 84px
+
+            img.logo
+                // Size
+                width: 210px
+                // Position
+                margin: 26px auto 19px
+
+            div.tv-wrapper
                 width: 100%
 
                 img
-                    // Size
-                    width: 170px
+                    width: 96%
 
-            img.logo
-                // Position
-                padding: 30px 0 20px
-
-            img.tv
+            div.contact
                 // Size
-                width: 700px
+                max-width: 100%
+
+                img.banner
+                    // Size
+                    width: 137px
+
+                p
+                    // Size
+                    font-size: 1.2em
+
+                form.contact-form
+                    // Size
+                    width: 100%
+
+                    div
+                        // Size
+                        width: 90%
+
+                        label
+                            // Size
+                            width: 30%
+                            // Position
+                            float: left
+
+                        input
+                            // Size
+                            width: 70%
+                            // Position
+                            float: right
+
+                        textarea
+                            // Size
+                            width: 70%
+                            // Position
+                            float: right
+
+                        button
+                            // Size
+                            width: 70%
+                            // Font
+                            font-size: 1.3em
+
+                img.shoot-out
+                    // Size
+                    width: 80%
+
+
+            div.shows
+                // Size
+                width: 100%
+
+                img.banner
+                    // Size
+                    width: 104px
+
+                p
+                    // Position
+                    padding: 0 20px
+                    // Font
+                    font-size: 1.2em
+
+                img.dino-mac
+                    // Size
+                    width: 70%
+                    // Position
+
+            div.shop
+                // Size
+                width: 100%
+
+                img.banner
+                    // Size
+                    width: 76px
+
+                div#animation
+                    // Size
+                    height: 210px
+
+                    img.lizard
+                        // Size
+                        height: 85%
+                        width: auto
+
+                img.notice
+                    // Size
+                    width: 80%
+
+            div.footer-wrapper
+                // Flexbox
+                display: flex
+                justify-content: center
+                // Size
+                width: 100%
+
+                a
+
+                    img.footer
+                        // Size
+                        width: 205px
+                        // Position
+                        margin: 20px auto 20px
+
+                img.knob
+                    display: none
+
+@media screen and (max-width: 720px)
+
+    html
+
+        body
+            width: 100%
+
+            div.contact
+
+                form.contact-form
+
+                    div.submit
+                        // Position
+                        margin: 0
+
+                        button
+                            // Position
+                            margin: 0
+
+            div.shop
+                // Size
+                width: 100%
+
+            div.footer-wrapper
+
+                img.knob
+                    // Size
+                    width: 51px
+                    // Position
+                    top: -326px
+                    right: -76px

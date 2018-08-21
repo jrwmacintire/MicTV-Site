@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>https://johnmacintire.com/contact.html</loc>
+        <lastmod>2018-08-04T19:54:15.404Z</lastmod>
+    </url>
+    <url>
         <loc>https://johnmacintire.com/</loc>
-        <lastmod>2017-11-04T19:24:05.829Z</lastmod>
+        <lastmod>2018-08-04T19:53:45.628Z</lastmod>
+    </url>
+    <url>
+        <loc>https://johnmacintire.com/shop.html</loc>
+        <lastmod>2018-08-04T19:54:20.896Z</lastmod>
+    </url>
+    <url>
+        <loc>https://johnmacintire.com/shows.html</loc>
+        <lastmod>2018-08-04T20:36:52.582Z</lastmod>
     </url>
 </urlset>

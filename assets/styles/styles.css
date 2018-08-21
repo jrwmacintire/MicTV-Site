@@ -2,17 +2,10 @@
 html {
   padding: 0;
   margin: 0;
+  font-size: 16px;
 }
-/* line 9, ../sass/styles.sass */
+/* line 11, ../sass/styles.sass */
 html body {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  background-color: rgba(224, 172, 155, 0.25);
-}
-/* line 19, ../sass/styles.sass */
-html body div.page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,30 +19,548 @@ html body div.page {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 700px;
-  height: 100%;
-  margin: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(224, 172, 155, 0.25);
 }
-/* line 31, ../sass/styles.sass */
-html body div.page div.navbar {
+/* line 26, ../sass/styles.sass */
+html body div.navbar {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
-}
-/* line 38, ../sass/styles.sass */
-html body div.page div.navbar img {
-  width: 170px;
-}
-/* line 42, ../sass/styles.sass */
-html body div.page img.logo {
-  padding: 30px 0 20px;
-}
-/* line 46, ../sass/styles.sass */
-html body div.page img.tv {
   width: 700px;
+  margin: 10px 0 15px;
+}
+/* line 36, ../sass/styles.sass */
+html body div.navbar img {
+  width: 140px;
+}
+/* line 40, ../sass/styles.sass */
+html body img.logo {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  margin: 45px auto 15px;
+}
+/* line 48, ../sass/styles.sass */
+html body div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 55, ../sass/styles.sass */
+html body div.tv-wrapper {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 60, ../sass/styles.sass */
+html body div.contact {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 700px;
+}
+/* line 68, ../sass/styles.sass */
+html body div.contact img.line {
+  width: 90%;
+  padding: 0;
+  margin: 33px 0;
+}
+/* line 75, ../sass/styles.sass */
+html body div.contact img.banner {
+  height: 33px;
+}
+/* line 79, ../sass/styles.sass */
+html body div.contact p {
+  margin: 28px 0;
+  font-size: 1.6em;
+  font-family: "BioRhyme", serif;
+  font-weight: 500;
+}
+/* line 87, ../sass/styles.sass */
+html body div.contact p a {
+  text-decoration: none;
+}
+/* line 90, ../sass/styles.sass */
+html body div.contact form.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+/* line 98, ../sass/styles.sass */
+html body div.contact form.contact-form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 440px;
+  padding: 13px 0;
+  font-family: "BioRhyme", serif;
+}
+/* line 109, ../sass/styles.sass */
+html body div.contact form.contact-form div label {
+  width: 20%;
+  letter-spacing: 1px;
+}
+/* line 117, ../sass/styles.sass */
+html body div.contact form.contact-form div input {
+  width: 76%;
+  float: right;
+  border: none;
+  border-bottom: 1.4px solid #1f696b;
+  background-color: transparent;
+  color: #051011;
+  font-size: 1.1em;
+  font-family: monospace;
+  letter-spacing: 1.4px;
+}
+/* line 132, ../sass/styles.sass */
+html body div.contact form.contact-form div textarea {
+  width: 76%;
+  float: right;
+  padding: 3px 0 0 6px;
+  border: 1.4px solid #1f696b;
+  background-color: transparent;
+  font-size: 1.1em;
+  letter-spacing: 1.4px;
+}
+/* line 145, ../sass/styles.sass */
+html body div.contact form.contact-form div button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 72%;
+  height: 70px;
+  margin: 10px 0;
+  display: block;
+  background: rgba(98, 205, 209, 0.5);
+  border: 1px solid #1f696b;
+  font-size: 2em;
+  font-family: "BioRhyme", serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* line 165, ../sass/styles.sass */
+html body div.contact form.contact-form div button:hover {
+  width: 76%;
+  background: rgba(98, 205, 209, 0.9);
+  border-bottom: 5px solid #1a5558;
+  -webkit-transition: width 0.35s;
+  transition: width 0.35s;
+}
+/* line 174, ../sass/styles.sass */
+html body div.contact form.contact-form div button:active {
+  width: 100%;
+  border-bottom: 2px solid #103738;
+}
+/* line 180, ../sass/styles.sass */
+html body div.contact form.contact-form div i.success {
+  color: green;
+  display: none;
+}
+/* line 184, ../sass/styles.sass */
+html body div.contact form.contact-form div i.failure {
+  color: red;
+  display: none;
+}
+/* line 188, ../sass/styles.sass */
+html body div.contact div.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 194, ../sass/styles.sass */
+html body div.contact div.submit h3 {
+  display: none;
+  font-size: 1.4em;
+  margin: 14px 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 203, ../sass/styles.sass */
+html body div.contact div.submit p {
+  display: none;
+  font-size: 1.1em;
+  margin: 14px 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 212, ../sass/styles.sass */
+html body div.contact img.shoot-out {
+  width: 385px;
+}
+/* line 216, ../sass/styles.sass */
+html body div.shows {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 700px;
+}
+/* line 223, ../sass/styles.sass */
+html body div.shows img.line {
+  width: 90%;
+  margin: 28px 0;
+}
+/* line 229, ../sass/styles.sass */
+html body div.shows img.banner {
+  height: 39px;
+  margin-bottom: 1.8rem;
+}
+/* line 235, ../sass/styles.sass */
+html body div.shows section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid darkgrey;
+}
+/* line 242, ../sass/styles.sass */
+html body div.shows section h4 {
+  margin: 0.7rem auto;
+  font-size: 1.7rem;
+  font-family: "BioRhyme", serif;
+}
+/* line 247, ../sass/styles.sass */
+html body div.shows section h4 a {
+  text-decoration: none;
+  color: black;
+}
+/* line 251, ../sass/styles.sass */
+html body div.shows section h4 a:hover {
+  color: #8f8f8f;
+}
+/* line 254, ../sass/styles.sass */
+html body div.shows section p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: "BioRhyme", serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+/* line 265, ../sass/styles.sass */
+html body div.shows section p strong {
+  font-size: 1.5rem;
+}
+/* line 268, ../sass/styles.sass */
+html body div.shows section p a {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "BioRhyme", serif;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+/* line 277, ../sass/styles.sass */
+html body div.shows section p a:hover {
+  text-decoration: underline;
+}
+/* line 280, ../sass/styles.sass */
+html body div.shows img.dino-mac {
+  width: 375px;
+  margin: 24px 0;
+}
+/* line 286, ../sass/styles.sass */
+html body div.shop {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 700px;
+}
+/* line 295, ../sass/styles.sass */
+html body div.shop img.line {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  width: 90%;
+  margin: 28px 0;
+}
+/* line 303, ../sass/styles.sass */
+html body div.shop img.banner {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 96px;
+  padding: 0;
+}
+/* line 311, ../sass/styles.sass */
+html body div.shop div#animation {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 400px;
+  height: 320px;
+  margin: 14px 0 0;
+}
+/* line 322, ../sass/styles.sass */
+html body div.shop div#animation img {
+  display: none;
+  bottom: 0;
+}
+/* line 327, ../sass/styles.sass */
+html body div.shop div#animation img:first-child {
+  display: block;
+}
+/* line 330, ../sass/styles.sass */
+html body div.shop div#animation img.lizard {
+  width: 100%;
+  bottom: 0;
+}
+/* line 337, ../sass/styles.sass */
+html body div.shop img.notice {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 400px;
+}
+/* line 343, ../sass/styles.sass */
+html body div.shop img.bottom {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+/* line 349, ../sass/styles.sass */
+html body div.footer-wrapper {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+/* line 353, ../sass/styles.sass */
+html body div.footer-wrapper img.footer {
+  width: 270px;
+  margin-bottom: 50px;
+}
+/* line 359, ../sass/styles.sass */
+html body div.footer-wrapper img.knob {
+  width: 54px;
+  position: relative;
+  top: -348px;
+  right: -92px;
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 371, ../sass/styles.sass */
+  html {
+    font-size: 14px;
+  }
+  /* line 375, ../sass/styles.sass */
+  html body {
+    width: 100%;
+    height: auto;
+  }
+  /* line 379, ../sass/styles.sass */
+  html body div.navbar {
+    max-width: 100%;
+    margin: 6px 0 0;
+  }
+  /* line 387, ../sass/styles.sass */
+  html body div.navbar a img {
+    width: 84px;
+  }
+  /* line 391, ../sass/styles.sass */
+  html body img.logo {
+    width: 210px;
+    margin: 26px auto 19px;
+  }
+  /* line 397, ../sass/styles.sass */
+  html body div.tv-wrapper {
+    width: 100%;
+  }
+  /* line 400, ../sass/styles.sass */
+  html body div.tv-wrapper img {
+    width: 96%;
+  }
+  /* line 403, ../sass/styles.sass */
+  html body div.contact {
+    max-width: 100%;
+  }
+  /* line 407, ../sass/styles.sass */
+  html body div.contact img.banner {
+    width: 137px;
+  }
+  /* line 411, ../sass/styles.sass */
+  html body div.contact p {
+    font-size: 1.2em;
+  }
+  /* line 415, ../sass/styles.sass */
+  html body div.contact form.contact-form {
+    width: 100%;
+  }
+  /* line 419, ../sass/styles.sass */
+  html body div.contact form.contact-form div {
+    width: 90%;
+  }
+  /* line 423, ../sass/styles.sass */
+  html body div.contact form.contact-form div label {
+    width: 30%;
+    float: left;
+  }
+  /* line 429, ../sass/styles.sass */
+  html body div.contact form.contact-form div input {
+    width: 70%;
+    float: right;
+  }
+  /* line 435, ../sass/styles.sass */
+  html body div.contact form.contact-form div textarea {
+    width: 70%;
+    float: right;
+  }
+  /* line 441, ../sass/styles.sass */
+  html body div.contact form.contact-form div button {
+    width: 70%;
+    font-size: 1.3em;
+  }
+  /* line 447, ../sass/styles.sass */
+  html body div.contact img.shoot-out {
+    width: 80%;
+  }
+  /* line 452, ../sass/styles.sass */
+  html body div.shows {
+    width: 100%;
+  }
+  /* line 456, ../sass/styles.sass */
+  html body div.shows img.banner {
+    width: 104px;
+  }
+  /* line 460, ../sass/styles.sass */
+  html body div.shows p {
+    padding: 0 20px;
+    font-size: 1.2em;
+  }
+  /* line 466, ../sass/styles.sass */
+  html body div.shows img.dino-mac {
+    width: 70%;
+  }
+  /* line 471, ../sass/styles.sass */
+  html body div.shop {
+    width: 100%;
+  }
+  /* line 475, ../sass/styles.sass */
+  html body div.shop img.banner {
+    width: 76px;
+  }
+  /* line 479, ../sass/styles.sass */
+  html body div.shop div#animation {
+    height: 210px;
+  }
+  /* line 483, ../sass/styles.sass */
+  html body div.shop div#animation img.lizard {
+    height: 85%;
+    width: auto;
+  }
+  /* line 488, ../sass/styles.sass */
+  html body div.shop img.notice {
+    width: 80%;
+  }
+  /* line 492, ../sass/styles.sass */
+  html body div.footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  /* line 501, ../sass/styles.sass */
+  html body div.footer-wrapper a img.footer {
+    width: 205px;
+    margin: 20px auto 20px;
+  }
+  /* line 507, ../sass/styles.sass */
+  html body div.footer-wrapper img.knob {
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  /* line 514, ../sass/styles.sass */
+  html body {
+    width: 100%;
+  }
+  /* line 521, ../sass/styles.sass */
+  html body div.contact form.contact-form div.submit {
+    margin: 0;
+  }
+  /* line 525, ../sass/styles.sass */
+  html body div.contact form.contact-form div.submit button {
+    margin: 0;
+  }
+  /* line 529, ../sass/styles.sass */
+  html body div.shop {
+    width: 100%;
+  }
+  /* line 535, ../sass/styles.sass */
+  html body div.footer-wrapper img.knob {
+    width: 51px;
+    top: -326px;
+    right: -76px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

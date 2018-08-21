@@ -1,0 +1,101 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="description" content="MicTV contact information">
+
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=BioRhyme:200|Scope+One" rel="stylesheet">
+        <title>MicTV Contact</title>
+    </head>
+    <body>
+
+        <a href="index.html" target="_blank"><img id="logo" class="logo" src="images/elements/mictv-logo-lighter.png"/></a>
+
+        <div class="navbar">
+            <a id="contact" href="contact.html"><img src="images/elements/contact-lg-button.png"/></a>
+            <a id="shows" href="shows.html"><img src="images/elements/shows-lg-button.png"/></a>
+            <a id="shop" href="shop.html"><img src="images/elements/shop-lg-button.png"/></a>
+        </div>
+
+        <div class="contact container">
+            <img class="line" src="images/elements/line2.png">
+            <img class="banner" src="images/elements/contact.png">
+            <p>microphonetelevision@gmail.com</p>
+            <form class="contact-form" action="/rest/contact" method="POST" data-customer-form>
+                <div class="name">
+                    <label for="name" hidden>Name</label>
+                    <input id="name" type="text" name="name" value="" placeholder="Name"></input>
+                    <i class="fa fa-check success"></i>
+                    <i class="fa fa-exclamation-circle failure"></i>
+                </div>
+                <div class="email">
+                    <label for="email" hidden>Email</label>
+                    <input id="email" type="text" name="email" value="" placeholder="Email"></input>
+                    <i class="fa fa-check success"></i>
+                    <i class="fa fa-exclamation-circle failure"></i>
+                </div>
+                <div class="phone">
+                    <label for="phone" hidden>Phone</label>
+                    <input id="phone" type="text" name="phone" value="" placeholder="Phone"></input>
+                    <i class="fa fa-check success"></i>
+                    <i class="fa fa-exclamation-circle failure"></i>
+                </div>
+                <div class="message">
+                    <label for="message" hidden>Message</label>
+                    <textarea id="message" type="text" name="message" value="" placeholder="Message..." rows="5"></textarea>
+                    <i class="fa fa-check success"></i>
+                    <i class="fa fa-exclamation-circle failure"></i>
+                </div>
+                <div class="submit">
+                    <button id="submit">Submit</button>
+                    <h3>Thanks for the message.</h3>
+                    <p>We'll get back to you as soon as possible.</p>
+                </div>
+            </form>
+            <img class="shoot-out" src="images/elements/shoot-out.png">
+            <img class="line" src="images/elements/line2.png">
+        </div>
+
+        <div class="footer-wrapper">
+            <a href="https://johnmacintire.com"><img class="footer" src="images/elements/designed-by.png"/></a>
+            <!-- 'knob' trigger for changing background color -->
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="scripts/scripts.js"></script>
+        <script type="text/javascript" src="scripts/jquery-form2json.js"></script>
+        <script src="https://use.fontawesome.com/f0ed16df3c.js"></script>
+        <script>
+            $(function($) {
+                $('[data-customer-form]').on('submit', function(e) {
+                    e.preventDefault();
+                    var json = $(this).formToJson({
+                        pretty: true,
+                        delimiter: '.'
+                    });
+                    // For testing
+                    console.log(json);
+
+                    $.ajax({
+                        url: 'https://mictvmusic.com/rest/contact',
+                        type: 'POST',
+                        crossDomain: true,
+                        contentType: 'application/json',
+                        data: json,
+                        dataType: 'json',
+                        processData: false,
+                        success: function(data) {
+                            console.log('Function successful.');
+                        },
+                        error: function(xhr, ajaxOptions, thrownError) {
+                            console.log(thrownError);
+                            // $('div.submit').html("<h3>An error occurred.</h3><p>Please edit your information and try again.</p>");
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
