@@ -17,22 +17,6 @@ $('#bgColor').on('click', function() {
     }
 });
 
-// Background color change for small screens - TV trigger
-// $('img.tv').on('click', function() {
-//     w = $(document).width();
-//     if(w < 720) {
-//         if(knobAngle == 0) {
-//             knobAngle = 45;
-//             $('body').css({ background: 'rgba(117, 216, 102, 0.32)' });
-//         } else {
-//             knobAngle = 0;
-//             $('body').css({ background: 'rgba(224, 172, 155, 0.25)' });
-//         }
-//     } else {
-//         $('img.tv').click(false);
-//     }
-// });
-
 //
 //
 //
